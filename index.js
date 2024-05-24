@@ -9,9 +9,9 @@ app.use(cors());
 
 const PORT = 4000;
 
-app.get('/', (req, res) => {
+app.get('/get', (req, res) => {
   
-    res.send(" 200 ok");
+    res.send("200 ok");
   });
 app.post("/speed", (req, res) => {
   try {
