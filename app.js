@@ -9,7 +9,7 @@ app.use(cors());
 
 const PORT = 4000;
 
-app.use("/", (req, res) => {
+app.get("/", (req, res) => {
   res.send("200 ok");
 });
 
