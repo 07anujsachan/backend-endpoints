@@ -13,6 +13,16 @@ app.get("/", (req, res) => {
   res.send("200 ok");
 });
 
+app.post("/test", (req, res) => {
+  try {
+    console.log(data);
+
+    res.status(200).send({ message: "Data received successfully", data: data });
+  } catch (error) {
+    res.send(error);
+  }
+  const data = req.body;
+});
 app.post("/speed", (req, res) => {
   try {
     exec(`fast --upload --json`, (err, stdout, stderr) => {
