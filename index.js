@@ -9,10 +9,11 @@ app.use(cors());
 
 const PORT = 4000;
 
-app.get('/get', (req, res) => {
-  
-    res.send("200 ok");
-  });
+app.get("/", (req, res) => {
+  res.send("200 ok");
+});
+
+
 app.post("/speed", (req, res) => {
   try {
     exec(`fast --upload --json`, (err, stdout, stderr) => {
